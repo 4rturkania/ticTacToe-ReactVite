@@ -1,6 +1,8 @@
 import './styles.scss';
 import { useState } from 'react';
+import StatusMessage from './components/StatusMessage';
 import Board from './components/Board';
+
 import { calculateWinner } from './winner';
 
 function App() {
@@ -38,7 +40,7 @@ function App() {
 
   return (
     <div className="app">
-      <h2>{statusMessage}</h2>
+      <StatusMessage isXNext={isXNext} winner={winner} squares={squares} />
       <Board squares={squares} handleSquareClick={handleSquareClick} />
     </div>
   );
