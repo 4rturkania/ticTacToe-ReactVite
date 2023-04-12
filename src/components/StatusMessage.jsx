@@ -1,5 +1,3 @@
-import React from 'react';
-
 const StatusMessage = ({ isXNext, winner, squares }) => {
   const noMovesLeft = squares.every(squareValue => squareValue !== null);
   const nextPlayer = isXNext ? 'X' : 'O';
